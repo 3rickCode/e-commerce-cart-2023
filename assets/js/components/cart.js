@@ -39,7 +39,7 @@ function cart(db, printProducts) {
                         <i class="bx bx-minus"></i>
 
                     </button>
-                    <span class="article__quantity-text">"${item.qty}"</span>
+                    <span class="article__quantity-text">${item.qty}</span>
                     <button type="button" class="article__quantity-btn article--plus "data-id="${item.id}">
                         <i class="bx bx-plus"></i>
 
