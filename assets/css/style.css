@@ -121,6 +121,11 @@ buttom {
 }
 
 /* Global */
+body.dark {
+    background-color: var(--title-color);
+    color: var(--bg-color);
+}
+
 .section {
     padding: var(--sp-2) 0 var(--sp-1);
 
@@ -266,7 +271,7 @@ buttom {
     gap: var(--sp-1);
 }
 
-.nav__btn {
+.nav__btn i {
     font-size: 1.25rem;
 }
 .btn--cart{
