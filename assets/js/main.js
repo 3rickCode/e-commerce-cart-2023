@@ -4,6 +4,8 @@ import showCart from './components/showCart.js';
 import products from './components/products.js';
 import getProducts from './helpers/getProducts.js';
 import cart from './components/cart.js';
+import showDescription from './components/showDescription.js'
+import dataBase from './helpers/getProducts.js';
 
 /* Ocultar loader */
 loader()
@@ -18,7 +20,10 @@ showCart()
 /* End UI Elements */
 
 /* productos  */
-const {db, printProducts} =products(await getProducts())
+const {db, printProducts} =products(dataBase)
 
 /* carrito */
 cart(db,printProducts)
+
+/*Mostrar descripción */
+showDescription()
