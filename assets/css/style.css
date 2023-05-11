@@ -290,6 +290,44 @@ buttom {
   bottom: var(--header-height);
 }
 
+/* Hero */
+.hero {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/foto-gratis/whisky-vista-frontal-copa-conac-naranja-espacio-copia_23-2148673804.jpg?w=1380&t=st=1683693241~exp=1683693841~hmac=3db48dd4bebec3468787f428ef45cf8cb2f31f0f303904af582202990c51aa66');
+    background-size: cover;
+    background-position: left;
+}
+
+.opacity {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-1);
+    position: relative;
+    text-align: center;
+    color: var(--bg-color);
+    margin: 0;
+    padding: 0 var(--sp-0-75);
+}
+
+.hero__title {
+    padding: 0 var(--sp-2);
+    font-size: var(--medium-font);
+}
+
 /* products */
 .products__title {
   margin-bottom: var(--sp-2);
@@ -669,9 +707,80 @@ buttom {
   }
 }
 
+
 @media (min-width: 1024px) {
   .section--title,
   .container {
     margin: 0 auto;
   }
+}
+
+.cart__total{
+grid-column: span 2;
+justify-self: flex-end;
+
+} 
+.btn--buy{
+    grid-column: span 4;
+    background-color:var(--ColorButtonCarrito);
+    color: var(--body-color);
+    padding: var(--sp-1);
+    border: 0px;
+}
+.btn--buy:hover{
+    grid-column: span 4;
+    background-color:var(--body-color);
+    color: var(--primary-color);
+    padding: var(--sp-1);
+    border: 0px;
+}
+@media(min-width:768px){
+    :root{
+        --header-height:75px;
+    }
+    .header{
+        top:0;
+        bottom: unset;
+    }
+
+        .hero {
+            background-position: center;
+            align-items: flex-end;
+        }
+    
+        .hero .container {
+            max-width: 50%;
+        }
+
+    .nav__list{
+        display: flex;
+        align-items: center;
+    }
+    .nav__menu
+    .btn--close, 
+    .btn--menu{
+        display: none;
+    }
+    .main{
+        padding-top: var(--header-height);
+    }
+    .product__title{
+        font-size: var(--font-normal);
+    }
+    .cart{
+        top: var(--header-height);
+    }
+    }
+
+
+@media (min-width: 1024px){
+    .section--title,
+    .container {
+    margin: 0 auto;
+}
+
+.hero {
+ min-height: 500px;
+}
+
 }
